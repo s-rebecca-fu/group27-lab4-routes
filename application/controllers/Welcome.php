@@ -23,11 +23,25 @@ class Welcome extends Application
 		$authors = array ();
 		foreach ($source as $record)
 		{
-			$authors[] = array ('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
+			$authors[] = array ('who' => $record['who'],
+                                            'mug' => $record['mug'],
+                                            'href' => $record['where']                                            
+                                            );
 		}
 		$this->data['authors'] = $authors;
 
 		$this->render();
 	}
+        
+        public function lock(){
+            
+            // this is the view we want shown
+            $this->data['pagebody'] = 'justone';
+            
+            $source = $this->quotes->all();
+            $this->data = array_merge($this->data, $source[1]);
+            //var_dump($this->quotes->all());
+            $this->render();
+        }
 
 }
