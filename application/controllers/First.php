@@ -17,7 +17,5 @@ class First extends Application
 		$source = $this->quotes->first();
 		$this->data = array_merge($this->data, $source);
 		$this->render();
-	
 	}
-
 }
