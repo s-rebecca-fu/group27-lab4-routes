@@ -33,14 +33,13 @@ class Welcome extends Application
 		$this->render();
 	}
         
-        public function lock(){
+        public function shucks(){
             
             // this is the view we want shown
             $this->data['pagebody'] = 'justone';
             
-            $source = $this->quotes->all();
-            $this->data = array_merge($this->data, $source[1]);
-            //var_dump($this->quotes->all());
+            $this->data = array_merge($this->data, $this->quotes->get(2));
+
             $this->render();
         }
 
