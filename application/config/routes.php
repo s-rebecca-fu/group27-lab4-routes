@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['lock/(:any)/(:any)'] = 'hogwarts/shucks';
 $route['sleep'] = 'First/zzz';
 $route['([a-zA-Z]{4})/bingo'] = 'Bingo/index';
+$route['last'] = 'last/welcome';
 
 $route['dunno'] = function() {
     
